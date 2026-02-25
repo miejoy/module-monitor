@@ -29,7 +29,7 @@ open class ModuleMonitor<Event: MonitorEvent> {
     /// 用于生成观察者ID
     var generateObserverId: Int = 0
     /// 通知观察者
-    var notifyObserver: (Event, MonitorObserver) -> Void
+    let notifyObserver: (Event, MonitorObserver) -> Void
 
     
     /// 初始化监听器
@@ -39,7 +39,6 @@ open class ModuleMonitor<Event: MonitorEvent> {
     }
     
     /// 添加观察者
-    @discardableResult
     open func addObserver(_ observer: MonitorObserver) -> AnyCancellable {
         DispatchQueue.syncOnMonitorQueue {
             generateObserverId += 1
