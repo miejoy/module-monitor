@@ -6,3 +6,10 @@ DerivedData/
 .swiftpm/configuration/registries.json
 .swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 .netrc
+
+# Added by check-and-test script
+
+.build
+
+# Added by check-and-test script
+.swiftpm
